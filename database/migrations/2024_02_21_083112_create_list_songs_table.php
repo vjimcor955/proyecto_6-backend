@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('list_songs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('songs');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
