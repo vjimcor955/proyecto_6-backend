@@ -17,7 +17,9 @@ class ListSongFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'songs' => $this->faker->songs(),
+            'user_id' => $this->faker->user_id(),
         ];
     }
 }

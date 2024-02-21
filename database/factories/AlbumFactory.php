@@ -17,7 +17,9 @@ class AlbumFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'artist' => $this->faker->artist(),
+            'img' => $this->faker->img(),
         ];
     }
 }
