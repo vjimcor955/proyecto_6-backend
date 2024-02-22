@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('artist');
-            $table->blob('img');
+            $table->binary('img');
             $table->timestamps();
         });
     }
