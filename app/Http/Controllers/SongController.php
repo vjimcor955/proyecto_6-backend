@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Song;
 use App\Http\Requests\StoreSongRequest;
 use App\Http\Requests\UpdateSongRequest;
+use Illuminate\Support\Facades\Log;
 
 class SongController extends Controller
 {
@@ -13,7 +14,8 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
+        $songs = Song::all();
+        return response()->json($songs);
     }
 
     /**
@@ -29,7 +31,12 @@ class SongController extends Controller
      */
     public function store(StoreSongRequest $request)
     {
-        //
+        Log::info($request);
+        
+        $song = Song::create($request->validated());
+        Log::info($song);
+        
+        return response()->json($song, 201);
     }
 
     /**
@@ -37,7 +44,7 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        //
+        return response()->json($song);
     }
 
     /**
@@ -49,7 +56,7 @@ class SongController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resource in storage. (?????????????????)
      */
     public function update(UpdateSongRequest $request, Song $song)
     {
@@ -61,6 +68,7 @@ class SongController extends Controller
      */
     public function destroy(Song $song)
     {
-        //
+        $song->delete();
+        return response()->json('The song has been deleted');
     }
 }
