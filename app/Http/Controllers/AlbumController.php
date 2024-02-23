@@ -5,15 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Album;
 use App\Http\Requests\StoreAlbumRequest;
 use App\Http\Requests\UpdateAlbumRequest;
+use Illuminate\Support\Facades\Log;
 
 class AlbumController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */
+     */ 
     public function index()
     {
-        //
+        $albums = Album::all();
+        return response()->json($albums);
     }
 
     /**
@@ -29,7 +31,12 @@ class AlbumController extends Controller
      */
     public function store(StoreAlbumRequest $request)
     {
-        //
+        Log::info($request);
+        
+        $album = Album::create($request->validated());
+        Log::info($album);
+        
+        return response()->json($album, 201);
     }
 
     /**
@@ -37,7 +44,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        //
+        return response()->json($album);
     }
 
     /**
@@ -49,7 +56,7 @@ class AlbumController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified resource in storage. (?????????????????)
      */
     public function update(UpdateAlbumRequest $request, Album $album)
     {
@@ -61,6 +68,7 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
-        //
+        $album->delete();
+        return response()->json('The album has been deleted');
     }
 }
