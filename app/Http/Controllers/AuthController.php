@@ -19,14 +19,18 @@ class AuthController extends Controller
       'name' => 'required|string',
       'email' => 'required|string',
       'user' => 'required|string',
-      'password' => 'required|string'
+      'password' => 'required|string',
+      'ranking' => 'required|json',
+      'lists' => 'required|json'
     ]);
 
     $user = User::create([
       'name' => $fields['name'],
       'email' => $fields['email'],
       'user' => $fields['user'],
-      'password' => bcrypt($fields['password'])
+      'password' => bcrypt($fields['password']),
+      'ranking' => $fields['ranking'],
+      'lists' => $fields['lists']
     ]);
 
     return response()->json($user, 201);
