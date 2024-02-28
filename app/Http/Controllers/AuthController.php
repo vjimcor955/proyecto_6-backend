@@ -51,11 +51,11 @@ class AuthController extends Controller
 
     $user = User::where('user', $fields['user'])->first();
 
-    $token = $user->createToken('auth-token')->plainTextToken;
+    $token = $user->createToken('token')->plainTextToken;
 
     return response()->json([
       'user' => $user,
-      'auth-token' => $token
+      'token' => $token
     ]);
   }
 }
