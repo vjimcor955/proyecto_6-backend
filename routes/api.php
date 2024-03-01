@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,9 @@ Route::group([
     Route::get('/albums/{album}', [AlbumController::class, 'show']);
     Route::post('/albums', [AlbumController::class, 'store']);
     Route::delete('/albums/{album}', [AlbumController::class, 'destroy']);
+
+    // User endpoints
+    Route::get('/users', [UserController::class, 'index']);
+    Route::get('/users/{user}', [UserController::class, 'show']);
+    Route::put('/users/{user}', [UserController::class, 'update']);
 });
