@@ -1,0 +1,211 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-03-01T12:22:28.698Z",
+  "__export_source": "insomnia.desktop.app:v8.6.1",
+  "resources": [
+    {
+      "_id": "req_123dcf276dc34b47a58e41af4f2aa74e",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1709195352955,
+      "created": 1708677413358,
+      "url": "localhost:80/api/songs",
+      "name": "All Songs",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.5.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "11|96SplbnxXufBc9GSELbCY642mOn2M739UIxmulNXcd58f371"
+      },
+      "metaSortKey": -1708679987050,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "parentId": null,
+      "modified": 1708677387350,
+      "created": 1708677387350,
+      "name": "Songs",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_0b5d3a4d06f4462c856c15e999287bb1",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1709224915587,
+      "created": 1708680074108,
+      "url": "localhost:80/api/songs/1",
+      "name": "Song by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.5.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "13|qmrzgypLenYGK6giyaq7j9KzlAHxFZggimKxujbIa75a0fe9"
+      },
+      "metaSortKey": -1708679987000,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_da85d9040654413dbdf119d8c9a2eb68",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1709195434560,
+      "created": 1708679986950,
+      "url": "localhost:80/api/songs",
+      "name": "Create Song",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Example 4\",\n\t\"artist\": \"Example 4\",\n\t\"img\": null\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_99f67376d69f49c5b4df4216b967c862"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1",
+          "id": "pair_df77e3309fcc4745b5f2b91d270ef700"
+        },
+        {
+          "id": "pair_49cae7190ab2486b963cae5d95675ea7",
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "11|96SplbnxXufBc9GSELbCY642mOn2M739UIxmulNXcd58f371"
+      },
+      "metaSortKey": -1708679986950,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_04d356ed1ec0493e963b8e39fefe586f",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1709295675052,
+      "created": 1708680532473,
+      "url": "localhost:80/api/songs/11",
+      "name": "Delete Song",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "1|JDcVXMETaXR6Dnc7ioMGaaEMAA2pycydCyXYJibn4ff58274"
+      },
+      "metaSortKey": -1708679986850,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_64f519ec9f953af1d480e0068b83501f33676c63",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1708677387358,
+      "created": 1708677387359,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1708677387359,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_64f519ec9f953af1d480e0068b83501f33676c63",
+      "parentId": "wrk_d06f03b0a42f4c768c803d1b0e2fe738",
+      "modified": 1708681875774,
+      "created": 1708677387362,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "XSRF-TOKEN",
+          "value": "eyJpdiI6IjFXK3NsdFltR1VpWlZwUU9pbUdwY0E9PSIsInZhbHVlIjoieHdhMm5KRldicWkzckMwR1dQYWdaZ2R2SlRMNC9PUEZHN2hTeTdIRkZYUlJFZzRydE40RXhIWGlBSEwxVVVKdFdZZVA2K0FYU1dQNnFNdFBZMkJobFF0TzlRbE92Tk9oSEhMUys1N01NNHFaT2d4NnErM2dLNDRpeEpuaFZ5SGciLCJtYWMiOiJmZjRjNjM3ZDM2ZDE1ZGUxZmQ1Y2FiMDMyOTY0ZTIxMjc0NzAxMmVjYWJhMTc4NzliYTcxZTFhNWFjMTI3YTNhIiwidGFnIjoiIn0%3D",
+          "expires": "2024-02-23T11:51:15.000Z",
+          "maxAge": 7200,
+          "domain": "localhost",
+          "path": "/",
+          "hostOnly": true,
+          "creation": "2024-02-23T09:51:15.770Z",
+          "lastAccessed": "2024-02-23T09:51:15.770Z",
+          "sameSite": "lax",
+          "id": "faa97de3-9833-48c6-9bab-37f9bd1f98f1"
+        },
+        {
+          "key": "laravel_session",
+          "value": "eyJpdiI6IkgzL0FPaWN6ZlBvcG5ZckZQRTI4c0E9PSIsInZhbHVlIjoiQzFZcVFTTU1KSk5zSFNvTVp0Nml0MERyWmNNN1YyeVRWZW4zUFVTcGpENzloNHUxSmtuZnJnNkkyUmhUcEU3N2hxd0pnU0FXSVEzS0NDNmlzMWk4eTNQQ0dpRUdrV2V4Rm1iVTdKVXZQc2ZsaHlTVE9sdU44NTM4TjV3NGsxZlciLCJtYWMiOiJlNTQ1Y2QxZDhmMThiMWJmNDAzYjgwMTU0NGMzOTdjZWQ3NGUwYjA2YzQyMGM1ZjY3ZmRlZDVjNGQ0YWFlOTViIiwidGFnIjoiIn0%3D",
+          "expires": "2024-02-23T11:51:15.000Z",
+          "maxAge": 7200,
+          "domain": "localhost",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": true,
+          "creation": "2024-02-23T09:51:15.774Z",
+          "lastAccessed": "2024-02-23T09:51:15.774Z",
+          "sameSite": "lax",
+          "id": "3bd0e96d-03ee-4a9e-adce-d781da16005e"
+        }
+      ],
+      "_type": "cookie_jar"
+    }
+  ]
+}
